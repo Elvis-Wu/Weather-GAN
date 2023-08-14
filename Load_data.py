@@ -51,3 +51,6 @@ if __name__ == '__main__' :
         print(image.shape)
         #4(張), 3(RGB三通道), 3600(長), 3600(寬)
         break
+
+#im = Image.open(r"D:\NTUT\Weather_AI\self-project\GAN\weather-GAN\train_data\00_56_37.png")
+#im.show()
