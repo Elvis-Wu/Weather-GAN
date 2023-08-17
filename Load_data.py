@@ -7,6 +7,7 @@ import os
 import pandas as pd #資料處理
 import torch
 from PIL import Image
+from sklearn.model_selection import train_test_split
 
 # 設定dataset路徑
 project_path = r"D:\NTUT\Weather_AI\self-project\GAN\weather-GAN"
@@ -54,3 +55,21 @@ if __name__ == '__main__' :
 
 #im = Image.open(r"D:\NTUT\Weather_AI\self-project\GAN\weather-GAN\train_data\00_56_37.png")
 #im.show()
+
+#切割訓練集與測試集
+train_set, test_set = train_test_split(image, test_size=0.2, random_state=42)
+train_set = np.array(train_set)
+test_set = np.array(test_set)
+
+#儲存訓練集和測試集
+if not os.path.exists("train_set") :
+    os.makedirs("train_set")
+    print("train_set dir is create.")
+if not os.path.exists("test_set") :
+    os.makedirs("test_set")
+    print("test_set dir is create.")
+    
+np.save("train_set/train_set.npy", train_set)
+print("Store train set.")
+np.save("test_set/test_set.npy", test_set)
+print("Store test set.")
