@@ -3,3 +3,4 @@ train_set/train_set.npy
 generated_images
 GAN_32_32.ipynb
 /Train
+/__pycache__
