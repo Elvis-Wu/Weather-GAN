@@ -2,5 +2,7 @@ test_set/test_set.npy
 train_set/train_set.npy
 generated_images
 GAN_32_32.ipynb
-/Train
-/__pycache__
+Train
+__pycache__
+generated_images_64_64
+train_data
