@@ -6,3 +6,5 @@ Train
 __pycache__
 generated_images_64_64
 train_data
+Typhoon_1
+generated_images_LSTM
